@@ -95,11 +95,11 @@ Take the Spring Web MVC project for example:
 The following table shows the dependencies and compatabilities of Nacos Spring Project.
 
 | Dependencies   | Compatibility |
-| -------------- | ------------- |
-| Java           | 1.8+         |
-| Spring Context | 3.2+         |
-| [Alibaba Spring Context Support](https://github.com/alibaba/spring-context-support) | 1.0.1+ |
-| [Alibaba Nacos](https://github.com/alibaba/nacos) | 1.1.1+ |
+| -------------- |---------------|
+| Java           | 17            |
+| Spring Context | 6.1+          |
+| [Alibaba Spring Context Support](https://github.com/alibaba/spring-context-support) | 1.0.12+       |
+| [Alibaba Nacos](https://github.com/alibaba/nacos) | 2.3.2+        |
 
 
 
