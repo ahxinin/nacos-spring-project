@@ -17,6 +17,7 @@
 
 package com.alibaba.nacos.spring.test;
 
+import com.alibaba.nacos.api.config.filter.IConfigFilter;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -193,6 +194,11 @@ public class MockConfigService implements ConfigService {
 	@Override
 	public String getServerStatus() {
 		return "UP";
+	}
+
+	@Override
+	public void addConfigFilter(IConfigFilter iConfigFilter) {
+
 	}
 
 	@Override

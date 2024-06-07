@@ -17,6 +17,7 @@
 
 package com.alibaba.nacos.spring.context.event.config;
 
+import com.alibaba.nacos.api.config.filter.IConfigFilter;
 import java.util.Properties;
 import java.util.concurrent.Executor;
 
@@ -156,6 +157,11 @@ public class EventPublishingConfigService
 	@Override
 	public String getServerStatus() {
 		return configService.getServerStatus();
+	}
+
+	@Override
+	public void addConfigFilter(IConfigFilter iConfigFilter) {
+		configService.addConfigFilter(iConfigFilter);
 	}
 
 	@Override

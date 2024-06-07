@@ -79,8 +79,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- Compiler settings properties -->
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <!-- Exclude all generated code -->
@@ -88,9 +88,9 @@
         </sonar.jacoco.itReportPath>
         <sonar.exclusions>file:**/generated-sources/**,**/test/**</sonar.exclusions>
         <!-- Nacos -->
-        <nacos.version>2.2.1</nacos.version>
+        <nacos.version>2.3.2</nacos.version>
         <!-- Spring -->
-        <spring.framework.version>5.2.9.RELEASE</spring.framework.version>
+        <spring.framework.version>6.1.8</spring.framework.version>
         <logback-classic.version>1.2.9</logback-classic.version>
         <guava.version>32.0.0-jre</guava.version>
         <spring6.framework.version>6.0.8</spring6.framework.version>
@@ -102,7 +102,7 @@
         <!-- apache commons-lang3 -->
         <commons-lang3.version>3.4</commons-lang3.version>
         <!-- Alibaba's Spring Context Support -->
-        <spring-context-support.version>1.0.11</spring-context-support.version>
+        <spring-context-support.version>1.0.12</spring-context-support.version>
         <jackson-core.version>2.13.4</jackson-core.version>
         <slf4j.version>1.7.7</slf4j.version>
         <junit.version>4.12</junit.version>
@@ -331,7 +331,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>3.7.0</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -340,6 +340,11 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <additionalJOptions>
+                        <additionalJOption>-Xdoclint:none</additionalJOption>
+                    </additionalJOptions>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
